@@ -1,0 +1,123 @@
+/* 实时翻译 — 全站样式 v1 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f5f6f8;
+  --panel: #ffffff;
+  --line: #e2e5ea;
+  --text: #1c2330;
+  --muted: #7a8494;
+  --accent: #2563eb;
+}
+
+body {
+  font-family: "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar h1 { font-size: 20px; }
+
+.langbar { display: flex; align-items: center; gap: 8px; }
+
+.langbar select {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 14px;
+}
+
+.langbar button {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.langbar button:hover { border-color: var(--accent); color: var(--accent); }
+
+.panels {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 16px 20px 20px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.panel textarea {
+  flex: 1;
+  min-height: 320px;
+  border: 0;
+  outline: none;
+  resize: none;
+  padding: 16px;
+  font-size: 17px;
+  line-height: 1.7;
+  font-family: inherit;
+  color: var(--text);
+  background: transparent;
+}
+
+.panel textarea[readonly] { color: #33405a; background: #fafbfd; }
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+}
+
+.row .hint, .row #status { font-size: 12px; color: var(--muted); }
+
+.row #status.is-error { color: #c2410c; }
+
+.row button {
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.row button:hover { border-color: var(--accent); color: var(--accent); }
+
+/* 窄屏（手机）：上下堆叠 */
+@media (max-width: 720px) {
+  .topbar { padding: 12px 14px; }
+  .panels { grid-template-columns: 1fr; padding: 12px 14px 16px; gap: 12px; }
+  .panel textarea { min-height: 200px; font-size: 16px; }
+}
