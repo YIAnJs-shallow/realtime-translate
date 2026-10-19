@@ -1,0 +1,9 @@
+# 本地敏感配置（不入库）
+config/secrets.php
+config/database.local.php
+*.sql
+*.log
+backup_*/
+tmp/
+.DS_Store
+Thumbs.db
