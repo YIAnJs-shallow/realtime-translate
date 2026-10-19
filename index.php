@@ -11,12 +11,12 @@ $langs = $cfg['langs'];
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>实时翻译 · 边打字边翻译</title>
+<title>TypeTrans · 边打字边翻译</title>
 <link rel="stylesheet" href="assets/css/app.css?v=1">
 </head>
 <body>
 <header class="topbar">
-  <h1>实时翻译</h1>
+  <h1>TypeTrans</h1>
   <div class="langbar">
     <select id="srcLang" aria-label="源语言">
       <option value="auto">自动检测（中文）</option>
