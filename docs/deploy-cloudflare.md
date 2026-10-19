@@ -6,10 +6,10 @@
 ## 1. 建 GitHub 私有仓库（2 分钟）
 
 1. 打开 github.com → 右上角 + → New repository
-2. 名称建议：`typetrans`（用户已建仓；以实际仓库名为准）→ Create
+2. 名称：`realtime-translate`（用户已建仓 ✅）→ Create
 3. 本地推送（在 E:\e2\myproject 下执行）：
    ```
-   git remote add origin git@github.com:YIAnJs-shallow/<实际仓库名>.git
+   git remote add origin git@github.com:YIAnJs-shallow/realtime-translate.git
    git push -u origin main
    ```
 
