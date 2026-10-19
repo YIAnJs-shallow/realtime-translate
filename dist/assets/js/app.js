@@ -122,4 +122,9 @@
       doTranslate();
     }
   });
+
+  // PWA：注册 Service Worker（离线壳）。仅 HTTPS/localhost 生效
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    navigator.serviceWorker.register('/sw.js').catch(function () { /* 注册失败不影响使用 */ });
+  }
 })();

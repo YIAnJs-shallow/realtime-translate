@@ -35,7 +35,7 @@
 
 ## P1（手机优先重排）
 
-1. **PWA 完整化**：manifest + 图标 + Service Worker 离线壳 + iOS meta（添加到主屏幕全屏、秒开）
+1. **PWA 完整化**：manifest + 图标 + Service Worker 离线壳 + iOS meta ✅ 2026-10-19（scripts/gen_icons.php 可再生图标）
 2. **翻译缓存**（localStorage 同文本+语言对秒出、省额度）
 3. 语言互换已有；补充：常用语言收藏置顶、TTS 朗读、深色模式
 4. 历史记录（需后端 → 顺延到 A 方案或改 localStorage 轻量版）
